@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> survey form</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+       
+        <div class="container">
+            <h1 id="title">Survey Form</h1>
+            <main>
+            <p id="description">Let us know about you</p>
+            <form id="survey-form">
+                <div class="form-element">                  
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" class="form-input" placeholder="Enter Your Name"  required>
+                </div>
+                
+                <div class="form-element">
+                    <label for="email" id="email-label">Email-id</label>
+                    <input type="email" id="email" class="form-input" placeholder="Enter Your Email-id" required>
+                </div>
+                
+                <div class="form-element">
+                    <label for="age" id="number-label">Age</label>
+                    <input type="number" id="number" class="form-input" placeholder="Your Age, Dont worry we won't share it🤫" min="10" max="100" required>
+                </div>
+                
+                <div class="level">
+                    <label for="level" id="level">What is your level?</label>
+                    <select id="dropdown" class="level">
+                        <option value="Select an option" disabled>Select an option </option>
+                        <option value="Newbie">Newbie</option>
+                        <option value="Amateur">Amateur</option>
+                        <option value="Experienced">Experienced</option>
+                        <option value="Old-Hand">Old Hand</option>
+                    </select>
+                </div>
+                
+                <div class="radio">
+                    <p class="radio-description">Tell us Who you are?</p>
+                    
+                    <div class="radio-checks">
+                        <lable for="learner">
+                        <input id="learner" type="radio" name="learner-trainee" value="option1">Learner    
+                        </lable><br />
+                        
+                        
+                     
+                        <lable for="trainee">                     <input id="trainee" type="radio" name="learner-trainee" value="option2">Trainee    
+                        </lable>
+                    </div>
+                
+                </div>
+                
+                <div class="checkboxes">
+                    
+                    <p class="checks-description">Which languages and skills seek your interest?</p>
+                    <div class="form-checks">
+                        
+                        <input id="html" type="checkbox" name="languages" value="check1">
+                        <label for="html">HTML</label><br />
+
+
+                        <input id="css" type="checkbox" name="languages" value="check2">
+                        <label for="css">CSS </label><br />   
+
+
+                        <input id="js" type="checkbox" name="languages" value="check3">
+                        <label for="js">JavaScript</label><br/>
+
+
+                        <input id="js-query" type="checkbox" name="languages" value="check4">
+                        <label for="js-query">JS Query</label><br />    
+
+
+                        <input id="cpp" type="checkbox" name="languages" value="check5">
+                        <label for="cpp">C++</label><br />    
+
+
+                        <input id="pyhton" type="checkbox" name="languages" value="check6">
+                        <label for="python">Python</label><br />    
+
+
+                        <input id="java" type="checkbox" name="languages" value="check7">
+                        <label for="java">Java</label><br />
+                    </div>
+                        
+                </div>
+                
+              <div class="form-element">
+                <label for="comments">Any comments or suggestion?</label>
+                <textarea name="comments" id="comments" class="form-input" cols="30" rows="3" placeholder="Enter your commments here..."></textarea>
+              </div>
+                
+                <div id="button">
+                    <button type="submit">Submit</button>
+                </div>
+                
+            </form>
+            
+            </main>
+            
+           
+        </div>
+        
+     <footer> 
+                <div id="copyright">
+                &copy; 2019 Survey. All rights reserved.<br>
+                 By: Satyam
+                </div>
+
+            </footer>
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

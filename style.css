@@ -1,0 +1,712 @@
+/*******************************************************
+                Survey Form
+********************************************************/
+
+
+html{
+    min-height: 345px;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 100%;
+    height:  auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+    
+h1{
+    padding-top: 1rem;
+    font-size: 2.5em;
+}
+main{
+    background-color: #0b0c10;
+    color: #66FCF1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-top: 5px solid;
+    border-top-color: maroon;
+}
+#description{
+    font-size: 1.4em;
+    text-align: center;
+}
+.form-element,
+.level,
+.radio,
+.checkboxes{
+    padding-left: 10px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+@media screen and (min-width: 37rem ){
+    main{
+        max-width: 800px;
+    }
+    .form-element,
+    .level,
+    .radio,
+    .checkboxes{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    label,
+  .checks-description,
+    .radio p{
+    flex-basis: 40%;
+    margin-right: 2rem;
+    padding: 0.8rem;
+    text-align: right;
+  }
+    .form-element label{
+        flex-basis: 40%;
+    margin-right: 2rem;
+    padding: 0.8rem;
+    text-align: right;
+    }
+
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    max-width: 400px;
+    background: #0b0c10;
+    padding: 0.8rem;
+    color: #66fcf1;
+    border: 0px;
+    border-bottom: 1px solid #66fcf1;
+    font: inherit;
+    font-size: 1.2rem;
+    font-weight:700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+  caret-color: $color-accent;
+  &:focus {
+    color: $color-accent;
+  }
+  &::placeholder {
+    color: $color-accent;
+    opacity: 0.4;
+  }
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &:-moz-placeholder {
+    color: $color-accent;
+    opacity: 0.4;
+  }
+}
+select,
+option {
+       color: #66FCF1;      
+    }
+
+
+.radio-checks{
+    font-weight: 600;
+  flex: 100%;
+  max-width: 400px;
+    padding-top: 15px;
+}
+.form-checks{
+    font-weight: 600;
+  flex: 60%;
+  max-width: 400px;
+}
+    
+
+textarea{
+    resize: vertical;
+    font-weight: 600;
+    flex: 10%;
+    max-width: 400px;
+    align-items: flex-start;
+}
+
+
+button{
+    display: block;
+    width: 45%;
+    height: 50px;
+    margin: 55px auto 25px;
+    text-align: center;
+    background-color: #eb444a;
+    color:#fff ;
+    font: inherit;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+#copyright{
+    font-size: 12px;
+    text-align: right;
+    padding-bottom: 12px;
+    padding-right: 8px;
+    margin: 20px auto 0;
+    font: inherit;
+    background: #fff;
+    margin-top: 0;
+}
+
+
+/*****************************************************
+            Animation Name
+******************************************************/
+
+/***********
+.circle1{
+    position: absolute;
+    top: 100px;
+    left: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.circle2{
+    position: absolute;
+    top: 250px;
+    left: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+   
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle3{
+    position: absolute;
+    top: 400px;
+    left: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+   
+    
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle4{
+    position: absolute;
+    top: 550px;
+    left: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+    
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.circle5{
+    position: absolute;
+    top: 700px;
+    left: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+    
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.circle6{
+    position: absolute;
+    top: 850px;
+    left: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+    
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
+/* Top side*//*
+
+body{
+    background: red;
+}
+.circle7{
+    position: absolute;
+    top: 100px;
+    left: 380px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle8{
+    position: absolute;
+    top: 100px;
+    left: 570px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
+.circle9{
+    position: absolute;
+    top: 100px;
+    left: 760px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle10{
+    position: absolute;
+    top: 100px;
+    left: 950px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle11{
+    position: absolute;
+    top: 100px;
+    left: 1140px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+/*
+.circle1{
+    position: absolute;
+    top: 100px;
+    left: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+*/
+
+
+/*********************************************************
+                    Right Side
+**********************************************************/
+
+/**
+.circle12{
+    position: absolute;
+    top: 100px;
+    right: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle13{
+   position: relative;
+    top: 250px;
+    right: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle14{
+   position: relative;
+    top: 400px;
+    right: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle15{
+    position: absolute;
+    top: 550px;
+    right: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle16{
+    position: absolute;
+    top: 700px;
+    right: 190px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+/************************************************************
+                        Bottom Side
+************************************************************/
+/*
+.circle17{
+    position: absolute;
+    top: 700px;
+    left: 380px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle18{
+    position: absolute;
+    top: 700px;
+    left: 570px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
+.circle19{
+    position: absolute;
+    top: 700px;
+    left: 760px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle20{
+    position: absolute;
+    top: 700px;
+    left: 950px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.circle21{
+    position: absolute;
+    top: 700px;
+    left: 1140px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+      
+    -webkit-animation-name: beat;
+    -moz-animation-name: beat;
+    animation-name: beat;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes beat {
+    0% {
+      transform: scale(2) ;
+
+    50% {
+      transform: scale(0.4) ;
+    }
+   
+  }
+@-moz-keyframes beat {
+    0% {
+      transform: scale(2) ;
+
+    50% {
+      transform: scale(0.4) ;
+    }
+   
+  }
+@keyframes beat {
+   0% {
+      transform: scale(2) ;
+
+    50% {
+      transform: scale(0.4) ;
+    }
+   
+  }
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
